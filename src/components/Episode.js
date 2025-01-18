@@ -22,7 +22,8 @@ const EpisodePage = () => {
   const [comment, setComment] = useState("");
 
   useEffect(() => {
-    console.log(`id ${id} episode ${episodeId}`);
+    // console.log(`id ${id} episode ${episodeId}`);
+    window.scrollTo(0, 0);
     if (!id || !episodeId) return;
 
     const fetchEpisode = async () => {
@@ -134,7 +135,7 @@ const EpisodePage = () => {
                     <meta property="og:title" content= {`${title}`} />
                     <meta property="og:description" content={description} />
                     <meta property="og:image" content="https://prpropertystore.com/images/favicon.jpg" />
-                    <meta property="og:url" content="https://prpropertystore.com/novel" />
+                    <meta property="og:url" content="/" />
                     <meta property="og:type" content="website" />
     
                     {/* Twitter Card Metadata */}
@@ -229,7 +230,7 @@ const EpisodePage = () => {
         {/* Navigation buttons */}
         {parsedEpisodeId > 1 && (
           <button
-            onClick={() => navigate(`/novel/episode/${id}/${parsedEpisodeId - 1}`)}
+            onClick={() => navigate(`/episode/${id}/${parsedEpisodeId - 1}`)}
             className="text-3xl fixed left-20 transform -translate-x-1/2 top-[50vh]"
           >
             <FaArrowLeft />
@@ -238,7 +239,7 @@ const EpisodePage = () => {
 
         {parsedEpisodeId < episodeCount && (
           <button
-            onClick={() => navigate(`/novel/episode/${id}/${parsedEpisodeId + 1}`)}
+            onClick={() => navigate(`/episode/${id}/${parsedEpisodeId + 1}`)}
             className="text-3xl fixed right-20 transform translate-x-1/2 top-[50vh]"
           >
             <FaArrowRight />

@@ -57,7 +57,7 @@ function Home() {
 
   const handleItemClick = (title) => {
     const encodedTitle = encodeURIComponent(title); // Encode title to make it URL-safe
-    navigate(`/novel/item?title=${encodedTitle}`); // Navigate to the item detail page using title
+    navigate(`/item?title=${encodedTitle}`); // Navigate to the item detail page using title
   };
 
   const handleScroll = () => {
@@ -99,7 +99,7 @@ function Home() {
                 <meta property="og:title" content="Korean Novel" />
                 <meta property="og:description" content="Explore a vast collection of Korean novels and web novels." />
                 <meta property="og:image" content="https://prpropertystore.com/images/favicon.jpg" />
-                <meta property="og:url" content="https://prpropertystore.com/novel" />
+                <meta property="og:url" content="/" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card Metadata */}
@@ -169,11 +169,11 @@ function App() {
     <Router>
     <Navbar />
       <Routes>
-        <Route path="/novel" element={<Home />} />
-        <Route path="/novel/item" element={<ItemDetail />} /> {/* Use title in the route */}
-        <Route path="/novel/episode/:id/:episodeId" element={<EpisodeDetail />} />
-        <Route path="/novel/type" element={<Type />} />
-        <Route path="/novel/search" element={<Search />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/item" element={<ItemDetail />} /> {/* Use title in the route */}
+        <Route path="/episode/:id/:episodeId" element={<EpisodeDetail />} />
+        <Route path="/type" element={<Type />} />
+        <Route path="/search" element={<Search />} />
         
         <Route path="/about" element={<Home />} />
         <Route path="/services" element={<Home />} />

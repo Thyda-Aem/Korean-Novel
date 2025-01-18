@@ -38,8 +38,8 @@ const Search = () => {
         }
 
         const result = await response.json();
-
         if (result.data.length === 0) {
+
           setHasMore(false); // No more data available
         } else {
           setData(result.data);
@@ -56,7 +56,7 @@ const Search = () => {
 
   const handleItemClick = (title) => {
     const encodedTitle = encodeURIComponent(title); // Encode title to make it URL-safe
-    navigate(`/novel/item?title=${encodedTitle}`); // Navigate to the item detail page using title
+    navigate(`/item?title=${encodedTitle}`); // Navigate to the item detail page using title
   };
 
   if (loading) {
@@ -69,10 +69,13 @@ const Search = () => {
 
   if (error) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <p>Error: {error.message}</p>
-        {/* Optionally provide a retry button */}
-      </div>
+      <div className="flex justify-center items-center p-4">
+          <p className="text-gray-500">No results found</p>
+        </div>
+      // <div className="flex justify-center items-center min-h-screen">
+      //   {/* <p>Error: {error.message}</p> */}
+      //   {/* Optionally provide a retry button */}
+      // </div>
     );
   }
 
@@ -82,13 +85,13 @@ const Search = () => {
                         {/* Basic SEO Settings */}
                         <title>{query}</title>
                         <meta name="description" content={query} />
-                        <meta name="keywords" content={`Korean Novel, Webnovels, React, SEO, Helmet, ${query}`} />
+                        <meta name="keywords" content={`Korean Novel, Webnovels, React, SEO, Helmet, ${query}`}  />
         
                         {/* Open Graph for Facebook & Social Sharing */}
                         <meta property="og:title" content= {`${query}`} />
                         <meta property="og:description" content={query} />
                         <meta property="og:image" content="https://prpropertystore.com/images/favicon.jpg" />
-                        <meta property="og:url" content="https://prpropertystore.com/novel" />
+                        <meta property="og:url" content="/" />
                         <meta property="og:type" content="website" />
         
                         {/* Twitter Card Metadata */}

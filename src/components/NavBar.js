@@ -23,13 +23,13 @@ const Navbar = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    navigate(`/novel/search?query=${searchTerm.toLowerCase()}`);
+    navigate(`/search?query=${searchTerm.toLowerCase()}`);
   };
 
   const handleTypeButtonClick = (type) => {
     const encodedType = encodeURIComponent(type);
     setSelectedType(type);
-    navigate(`/novel/type?type=${encodedType}`);
+    navigate(`/type?type=${encodedType}`);
   };
 
   return (
@@ -37,7 +37,7 @@ const Navbar = () => {
       <nav className="bg-purple-600 p-2 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center">
           <div className="text-white text-xl font-bold text-center sm:text-left">
-            <Link to="/novel">
+            <Link to="/">
               <img src='https://prpropertystore.com/images/favicon.jpg' alt="Website Logo" style={{ width: '150px' }} />
             </Link>
           </div>

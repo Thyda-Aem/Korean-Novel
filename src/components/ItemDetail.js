@@ -43,7 +43,7 @@ function ItemDetail() {
   }
 
   const handleEpisodeNavigation = (id, episodeId) => {
-    navigate(`/novel/episode/${id}/${episodeId}`);
+    navigate(`/episode/${id}/${episodeId}`);
   };
 
   return (

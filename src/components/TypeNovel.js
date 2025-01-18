@@ -74,7 +74,7 @@ const Type = () => {
   // Navigate to item details
   const handleItemClick = (title) => {
     const encodedTitle = encodeURIComponent(title);
-    navigate(`/novel/item?title=${encodedTitle}`);
+    navigate(`/item?title=${encodedTitle}`);
   };
 
   // Infinite scroll handler
@@ -114,7 +114,7 @@ const Type = () => {
                         <meta property="og:title" content= {`${type}`} />
                         <meta property="og:description" content={type} />
                         <meta property="og:image" content="https://prpropertystore.com/images/favicon.jpg" />
-                        <meta property="og:url" content="https://prpropertystore.com/novel" />
+                        <meta property="og:url" content="/" />
                         <meta property="og:type" content="website" />
         
                         {/* Twitter Card Metadata */}
