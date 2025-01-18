@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // React Router imports
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Helmet } from "react-helmet";
+import GoogleAd from './GoogleAd';
 
 
 const EpisodePage = () => {
@@ -127,6 +128,7 @@ const EpisodePage = () => {
     <>
     <Helmet>
                     {/* Basic SEO Settings */}
+                   
                     <title>{title}</title>
                     <meta name="description" content={description} />
                     <meta name="keywords" content={`Korean Novel, Webnovels, React, SEO, Helmet, ${title}`} />
@@ -147,6 +149,7 @@ const EpisodePage = () => {
                     {/* Favicon */}
                     <link rel="icon" href="https://prpropertystore.com/images/favicon.ico" />
                 </Helmet>
+                <GoogleAd />
       {/* Use react-helmet to manage head content in React */}
     
       <div className="max-w-4xl mx-auto p-4 bg-white shadow-lg rounded-lg">

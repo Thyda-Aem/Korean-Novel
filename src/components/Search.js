@@ -1,6 +1,7 @@
 import React, { useState, useEffect, } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import GoogleAd from './GoogleAd';
 
 const Search = () => {
   const [data, setData] = useState([]); // State to store the data
@@ -82,6 +83,7 @@ const Search = () => {
   return (
     <>
     <Helmet>
+    
                         {/* Basic SEO Settings */}
                         <title>{query}</title>
                         <meta name="description" content={query} />
@@ -103,6 +105,7 @@ const Search = () => {
                         {/* Favicon */}
                         <link rel="icon" href="https://prpropertystore.com/images/favicon.ico" />
                     </Helmet>
+                    <GoogleAd />
     
     <div className="overflow-y-auto h-screen">
       {/* Check if data is empty */}

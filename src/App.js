@@ -6,6 +6,7 @@ import Navbar from "./components/NavBar";
 import Type from "./components/TypeNovel";
 import Search from "./components/Search";
 import { Helmet } from "react-helmet";
+import GoogleAd from './components/GoogleAd';
 
 
 function Home() {
@@ -91,6 +92,7 @@ function Home() {
       {/* Helmet for managing the <head> section */}
       <Helmet>
                 {/* Basic SEO Settings */}
+                
                 <title>Korean Novel</title>
                 <meta name="description" content="Discover the latest and most popular Korean novels." />
                 <meta name="keywords" content="Korean Novel, Webnovels, React, SEO, Helmet" />
@@ -111,6 +113,7 @@ function Home() {
                 {/* Favicon */}
                 <link rel="icon" href="https://prpropertystore.com/images/favicon.ico" />
             </Helmet>
+            <GoogleAd />
                
     <div
       ref={scrollContainerRef}

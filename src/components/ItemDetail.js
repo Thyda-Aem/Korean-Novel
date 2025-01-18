@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import GoogleAd from './GoogleAd';
 
 function ItemDetail() {
   const [title, setTitle] = useState('');
@@ -49,10 +50,12 @@ function ItemDetail() {
   return (
     <>
       <Helmet>
+      
         <title>{title}</title>
         <meta name="description" content={item.description} />
         <meta name="keywords" content={`Korean Novel, Webnovels, React, SEO, Helmet, ${title}`} />
       </Helmet>
+      <GoogleAd />
       <div className="flex justify-center min-h-screen bg-gray-100 p-5">
         <div className="max-w-4xl w-full bg-white rounded-lg shadow-md overflow-hidden">
           <img

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import GoogleAd from './GoogleAd';
 
 
 const Type = () => {
@@ -105,6 +106,7 @@ const Type = () => {
   return (
     <>
     <Helmet>
+   
                         {/* Basic SEO Settings */}
                         <title>{type}</title>
                         <meta name="description" content={type} />
@@ -126,6 +128,7 @@ const Type = () => {
                         {/* Favicon */}
                         <link rel="icon" href="https://prpropertystore.com/images/favicon.ico" />
                     </Helmet>
+                    <GoogleAd />
     <div ref={scrollContainerRef} className="overflow-y-auto h-screen">
       {/* Error Message */}
       {error && (
